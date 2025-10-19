@@ -1,0 +1,179 @@
+/* ======================================================
+   Author: Lea Francois
+   For: Front End Mentor - Social links profile 
+   Description: Stylesheet for Social links profile
+   ====================================================== */
+/* === FONT + VARIABLES === */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root{
+  /* Color */
+  --green: hsl(75 94% 57%);
+  --white: hsl(0 0% 100%);
+  --smooth-gray: hsl(0 0% 20%);
+  --middle-gray: hsl(0 0% 12%);
+  --black-gray: hsl(0 0% 8%);
+
+  /* Typo */
+  --fs-300: clamp(14px, 12px + .6vw, 16px);
+  --fs-400: clamp(16px, 14px + .7vw, 20px);
+  --fs-600: clamp(20px, 18px + 1vw, 28px);
+
+  --fw-regular: 400;
+  --fw-medium: 600;
+  --fw-bold: 700;
+
+  /* Layout */
+  --radius: 12px;
+  --space-1: .5rem;
+  --space-2: .75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+}
+
+/* === RESET === */
+* { 
+  box-sizing: border-box; 
+  margin:0; 
+  padding:0; 
+}
+
+img{ 
+  display:block; 
+  max-width:100%; 
+}
+
+button, a{ 
+  cursor:pointer; 
+}
+
+/* === PAGE === */
+body{
+  min-height:100svh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--black-gray);
+  color:var(--white);
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-size:var(--fs-300);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+/* === CARD === */
+section{
+  width:min(92vw, 34rem);
+  background:var(--middle-gray);
+  border-radius:var(--radius);
+  padding: var(--space-4);
+  text-align:center;
+  box-shadow: 0 20px 40px hsl(0 0% 0% / .35);
+}
+
+/* === HEADER === */
+header{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+
+  img{
+  width:85px; height:85px; border-radius:50%;
+}
+
+  /* === TEXT === */
+h2{ 
+  font-size:var(--fs-600); 
+  font-weight:var(--fw-bold); 
+  line-height:1.15; 
+}
+
+h4{ 
+  color:var(--green); 
+  font-size:var(--fs-400); 
+  font-weight:var(--fw-medium); 
+}
+
+p{ 
+  margin: var(--space-3) 0 var(--space-4); 
+  font-style: italic; 
+  opacity: .9; 
+}
+}
+
+
+/* === LINK === */
+a{
+  display: block;
+  width: 100%;
+  padding: .9rem 1rem;
+  border-radius: var(--radius);
+  background: var(--smooth-gray);
+  color: var(--white);
+  text-decoration: none;
+  font-weight:var(--fw-medium);
+  margin-top: var(--space-2);
+  transition: transform .15s ease, background-color .2s ease, color .2s ease;
+}
+
+a:hover{ 
+  background: var(--green); 
+  color: var(--black-gray); 
+  transform: translateY(-1px); 
+}
+
+a:active{ 
+  transform: translateY(0); 
+}
+
+a:focus-visible{
+  outline: 3px solid color-mix(in srgb, var(--green) 70%, white 30%);
+  outline-offset: 2px;
+}
+
+/* === ACCESSIBILYTY === */
+@media (prefers-reduced-motion: reduce){
+  * { 
+    transition: none !important; 
+  }
+}
+
+/* === RESPONSIVE === */
+
+/* small devices */
+@media (min-width: 480px){
+  section{ 
+    padding: calc(var(--space-4) + .25rem) calc(var(--space-4) + .5rem); 
+  }
+
+  header img{ 
+    width:95px; 
+    height:95px; 
+  }
+}
+
+/* tablet */
+@media (min-width: 768px){
+  section{
+    width:min(80vw, 32rem);
+    padding: calc(var(--space-4) + .5rem) calc(var(--space-4) + 1rem);
+    box-shadow: 0 30px 60px hsl(0 0% 0% / .45);
+  }
+
+  a{ 
+    padding: 1rem 1.1rem; 
+  }
+}
+
+/* large desktops */
+@media (min-width: 1024px){
+  section{ 
+    width: 28rem; 
+  }
+
+  header img{
+    width:105px; height:105px; 
+  }
+}
