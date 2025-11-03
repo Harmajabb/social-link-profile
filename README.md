@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links  
 
-- **RepoGithub:** [https://github.com/LeaFrancois/social-links-profile](#)  
-- **Live Site URL:** [https://leafrancois-social-links.netlify.app](#)  
+- **RepoGithub:** [Click here](https://github.com/Harmajabb/social-link-profile)  
+- **Live Site URL:** [Click here](https://harmajabb.github.io/social-link-profile/)  
 
 ---
 
