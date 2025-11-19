@@ -148,21 +148,18 @@ section.card {
   width: min(92vw, 38rem);
 }
 
-/* Conteneur du header + colonnes */
 .card-layout {
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
 }
 
-/* Chaque groupe de liens */
 .card-column h3 {
   font-size: var(--fs-400);
   font-weight: var(--fw-medium);
   margin-bottom: var(--space-2);
 }
 
-/* Petit ajustement pour ne pas avoir un gros vide entre titre et 1er lien */
 .card-column a:first-of-type {
   margin-top: 0;
 }
@@ -204,7 +201,7 @@ section.card {
 @media (min-width: 900px) {
 
   section.card {
-    width: min(90vw, 60rem); /* carte plus large en desktop */
+    width: min(90vw, 60rem);
   }
 
   .card-layout {
@@ -242,8 +239,6 @@ section.card {
     margin-left: var(--space-2);
   }
 
-  /* Les titres de colonnes alignés à gauche en desktop,
-     mais tu peux remettre center si tu préfères */
   .card-column h3 {
     text-align: left;
   }
