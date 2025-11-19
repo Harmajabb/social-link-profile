@@ -106,7 +106,7 @@ p{
   margin: var(--space-3) 0 var(--space-4); 
   font-style: italic; 
   opacity: .9; 
-  text-align: left;
+  padding: 0 3rem;
 }
 
 p:nth-last-of-type(1) {
@@ -144,6 +144,29 @@ a:focus-visible{
   outline-offset: 2px;
 }
 
+section.card {
+  width: min(92vw, 38rem);
+}
+
+/* Conteneur du header + colonnes */
+.card-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* Chaque groupe de liens */
+.card-column h3 {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-medium);
+  margin-bottom: var(--space-2);
+}
+
+/* Petit ajustement pour ne pas avoir un gros vide entre titre et 1er lien */
+.card-column a:first-of-type {
+  margin-top: 0;
+}
+
 /* === ACCESSIBILYTY === */
 @media (prefers-reduced-motion: reduce){
   * { 
@@ -175,6 +198,54 @@ a:focus-visible{
 
   a{ 
     padding: 1rem 1.1rem; 
+  }
+}
+
+@media (min-width: 900px) {
+
+  section.card {
+    width: min(90vw, 60rem); /* carte plus large en desktop */
+  }
+
+  .card-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    grid-template-areas:
+      "header about"
+      "work   school";
+    column-gap: var(--space-4);
+    row-gap: var(--space-4);
+    align-items: start;
+  }
+
+  .card-header {
+    grid-area: header;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-column-about {
+    grid-area: about;
+    margin-top: 8.5rem;
+    padding-left: var(--space-4);
+    margin-left: var(--space-2);
+  }
+
+  .card-column-work {
+    grid-area: work;
+    margin: 0 4rem;
+  }
+
+  .card-column-school {
+    grid-area: school;
+    padding-left: var(--space-4);
+    margin-left: var(--space-2);
+  }
+
+  /* Les titres de colonnes alignés à gauche en desktop,
+     mais tu peux remettre center si tu préfères */
+  .card-column h3 {
+    text-align: left;
   }
 }
 
