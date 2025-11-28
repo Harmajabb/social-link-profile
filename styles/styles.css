@@ -70,11 +70,6 @@ section{
   text-align:center;
   box-shadow: 0 20px 40px hsl(0 0% 0% / .35);
 
-  h3{ 
-  font-size:var(--fs-400); 
-  font-weight:var(--fw-medium); 
-  margin: var(--space-4);
-}
 }
 
 /* === HEADER === */
@@ -106,14 +101,9 @@ p{
   margin: var(--space-3) 0 var(--space-4); 
   font-style: italic; 
   opacity: .9; 
-  padding: 0 3rem;
 }
 
-p:nth-last-of-type(1) {
-  font-style: normal;
 }
-}
-
 
 /* === LINK === */
 a{
@@ -144,26 +134,6 @@ a:focus-visible{
   outline-offset: 2px;
 }
 
-section.card {
-  width: min(92vw, 38rem);
-}
-
-.card-layout {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-}
-
-.card-column h3 {
-  font-size: var(--fs-400);
-  font-weight: var(--fw-medium);
-  margin-bottom: var(--space-2);
-}
-
-.card-column a:first-of-type {
-  margin-top: 0;
-}
-
 /* === ACCESSIBILYTY === */
 @media (prefers-reduced-motion: reduce){
   * { 
@@ -172,7 +142,6 @@ section.card {
 }
 
 /* === RESPONSIVE === */
-
 /* small devices */
 @media (min-width: 480px){
   section{ 
@@ -195,52 +164,6 @@ section.card {
 
   a{ 
     padding: 1rem 1.1rem; 
-  }
-}
-
-@media (min-width: 900px) {
-
-  section.card {
-    width: min(90vw, 60rem);
-  }
-
-  .card-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-    grid-template-areas:
-      "header about"
-      "work   school";
-    column-gap: var(--space-4);
-    row-gap: var(--space-4);
-    align-items: start;
-  }
-
-  .card-header {
-    grid-area: header;
-    align-items: center;
-    text-align: center;
-  }
-
-  .card-column-about {
-    grid-area: about;
-    margin-top: 8.5rem;
-    padding-left: var(--space-4);
-    margin-left: var(--space-2);
-  }
-
-  .card-column-work {
-    grid-area: work;
-    margin: 0 4rem;
-  }
-
-  .card-column-school {
-    grid-area: school;
-    padding-left: var(--space-4);
-    margin-left: var(--space-2);
-  }
-
-  .card-column h3 {
-    text-align: left;
   }
 }
 
